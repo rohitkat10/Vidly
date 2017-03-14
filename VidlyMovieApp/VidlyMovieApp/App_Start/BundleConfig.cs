@@ -24,7 +24,7 @@ namespace VidlyMovieApp
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrapSolar.css",
                       "~/Content/site.css"));
         }
     }
