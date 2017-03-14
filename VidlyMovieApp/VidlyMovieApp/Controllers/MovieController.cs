@@ -14,7 +14,24 @@ namespace VidlyMovieApp.Controllers
         public ActionResult Random()
         {
             var Movie = new Movie { Name = "RockStar" };
+           // return Content ("Hi this is rohit ");
+            //return HttpNotFound();
+            //return new EmptyResult();
+            //return RedirectToAction("Index", "Home");
             return View(Movie);
+        }
+        public ActionResult Edit(int id)
+        {
+            return Content("Id=" + id);
+        }
+        //movies
+        public ActionResult Index(int? pageIndex,string Sortby)
+        {
+            if (!pageIndex.HasValue)
+                pageIndex = 1;
+            if (string.IsNullOrWhiteSpace(Sortby))
+                Sortby = "Name";
+            return Content(string.Format("PageIndex={0}&Sortby={1}",pageIndex,Sortby));
         }
 	}
 }
