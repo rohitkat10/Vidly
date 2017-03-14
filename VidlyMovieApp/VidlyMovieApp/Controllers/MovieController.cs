@@ -33,5 +33,9 @@ namespace VidlyMovieApp.Controllers
                 Sortby = "Name";
             return Content(string.Format("PageIndex={0}&Sortby={1}",pageIndex,Sortby));
         }
+        public ActionResult ByRelasedDate(int year,int month)
+        {
+            return Content(year + "/" + month);
+        }
 	}
 }
