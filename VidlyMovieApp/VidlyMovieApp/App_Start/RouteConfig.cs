@@ -12,7 +12,7 @@ namespace VidlyMovieApp
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            routes.MapMvcAttributeRoutes();
             routes.MapRoute(
                 "MoviesByRelasedDate",
                 "Movie/relased/{year}/{month}",

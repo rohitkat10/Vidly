@@ -33,6 +33,7 @@ namespace VidlyMovieApp.Controllers
                 Sortby = "Name";
             return Content(string.Format("PageIndex={0}&Sortby={1}",pageIndex,Sortby));
         }
+        [Route("movies/relased/{year}/{month:regex(\\d{4}):range(1,12)}")]
         public ActionResult ByRelasedDate(int year,int month)
         {
             return Content(year + "/" + month);
